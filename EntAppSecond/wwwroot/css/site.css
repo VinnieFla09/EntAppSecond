@@ -17,3 +17,17 @@ body {
     background-color:lightblue;
     border: solid;
 }
+
+.field-validation-error {
+    color:red;
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.validation-summary-errors {
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style:italic;
+    font-size:80%;
+}
