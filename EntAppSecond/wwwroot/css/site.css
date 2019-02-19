@@ -5,9 +5,29 @@ body {
     padding-bottom: 20px;
 }
 
+.field-validation-error {
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+    border: dashed;
+    margin: 10px;
+    Padding: 10px;
+}
+
+.validation-summary-errors {
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 80%;
+    border:solid;
+    margin:10px;
+}
+
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
-.body-content {
+.body-content 
+{
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -18,16 +38,4 @@ body {
     border: solid;
 }
 
-.field-validation-error {
-    color:red;
-    font-weight:bold;
-    text-decoration:underline;
-}
 
-.validation-summary-errors {
-    color: red;
-    font-weight: bold;
-    text-decoration: underline;
-    font-style:italic;
-    font-size:80%;
-}
