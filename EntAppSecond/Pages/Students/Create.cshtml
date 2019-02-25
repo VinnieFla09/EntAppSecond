@@ -18,15 +18,42 @@
     <div>
         <label asp-for=Student.StudentID></label>
         <input asp-for=Student.StudentID />
-
-
     </div>
+    @*<div>
+        <label asp-for=Student.Dob></label>
+        <input asp-for=Student.Dob placeholder="01/01/1980" />
+    </div>
+    <div>
+        <label asp-for=Student.NumberOfModule></label>
+        <input asp-for=Student.NumberOfModule />
+    </div>
+    <div>
+        <label asp-for=Student.Height></label>
+        <input asp-for=Student.Height />
+    </div>
+    <div>
+        <label asp-for=Student.Email></label>
+        <input asp-for=Student.Email />
+    </div>
+    <div>
+        <label asp-for=Student.EmailConfirm></label>
+        <input asp-for=Student.EmailConfirm />
+    </div>*@
 
     <button class="btn-default" type="submit">Press Here</button>
 
     <div asp-validation-summary="All"></div>
-    <span asp-validation-for="Student.StudentID"></span>
+    @*<span asp-validation-for="Student.StudentID" ></span>
+    <span asp-validation-for=Student.FirstName></span>
+    <span asp-validation-for=Student.LastName></span>
+    <span asp-validation-for=Student.Dob></span>
+    <span asp-validation-for=Student.Email></span>
+    <span asp-validation-for=Student.Height></span>
+    <span asp-validation-for=Student.NumberOfModule></span>*@
 </form>
+
+
+
 
 
 
