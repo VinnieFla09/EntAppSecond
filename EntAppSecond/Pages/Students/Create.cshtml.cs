@@ -12,12 +12,12 @@ namespace EntAppSecond.Pages.Students
     public class CreateModel : PageModel
     {
 
-        private readonly StudentContext _db;
+        //private readonly StudentContext _db;
 
-        public CreateModel(StudentContext db)
-        {
-            _db = db;
-        }
+        //public CreateModel(StudentContext db)
+        //{
+        //    _db = db;
+        //}
 
         [BindProperty]
         public Student Student { get; set; } = new Student();
@@ -30,25 +30,26 @@ namespace EntAppSecond.Pages.Students
         //    Student.LastName = HttpContext.Session.GetString("LastName");
         //}
 
-        //public void OnPost()
+        //public async Task<IActionResult> OnPostAsync()
         //{
-        public async Task<IActionResult> OnPostAsync()
-        {
-            if (ModelState.IsValid)
-            {
-                _db.Students.Add(Student);
-                await _db.SaveChangesAsync();
-                return RedirectToPage("ListStudents");
-            }
+        //    if (ModelState.IsValid)
+        //    {
+        //        _db.Students.Add(Student);
+        //        await _db.SaveChangesAsync();
+        //        return RedirectToPage("ListStudents");
+        //    }
 
-            else
-            {
-                return Page();
-            }
-        }
-
-        //if (Student.Email != Student.EmailConfirm)
-        //    ModelState.AddModelError("Student.Email", "emails don't match");
+        //    else
+        //    {
+        //        return Page();
+        //    }
         //}
-    }
+
+
+        public void OnPost()
+        {
+            if (Student.Email != Student.EmailConfirm)
+            ModelState.AddModelError("Student.Email", "emails don't match");
+        }
+}
 }

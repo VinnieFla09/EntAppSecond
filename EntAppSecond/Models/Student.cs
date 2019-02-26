@@ -23,29 +23,29 @@ namespace EntAppSecond.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; } = "";
 
-        //[Required(ErrorMessage = "Date entered incorrect")]
-        //[DataType(DataType.Date)]
-        //[Display(Name = "Date of Birth")]
-        //public DateTime Dob { get; set; }
+        [Required(ErrorMessage = "Date entered incorrect")]
+        [DataType(DataType.Date)]
+        [Display(Name = "Date of Birth")]
+        public DateTime Dob { get; set; }
 
-        //[Required (ErrorMessage ="Number of modules must be between 1 and 10")]
-        //[Range(2, 10)]
-        //[Display(Name = "Number of Module")]
-        //public byte NumberOfModule { get; set; }
+        [Required(ErrorMessage = "Number of modules must be between 1 and 10")]
+        [Range(2, 10)]
+        [Display(Name = "Number of Module")]
+        public byte NumberOfModule { get; set; }
 
-        //[Required (ErrorMessage ="Height must be between 50 and 250cm")]
-        //[Range(50, 250)]
-        //[Display(Name = "Hight in cm")]
-        //public byte Height { get; set; }
+        [Required(ErrorMessage = "Height must be between 50 and 250cm")]
+        [Range(50, 250)]
+        [Display(Name = "Hight in cm")]
+        public byte Height { get; set; }
 
-        //[EmailAddress]
-        //[Required]
-        //[RegularExpression(@"[\w-]+@([\w-]+\.)+[\w-]+")]
-        //public string Email { get; set; }
+        [EmailAddress]
+        [Required]
+        [RegularExpression(@"[\w-]+@([\w-]+\.)+[\w-]+")]
+        public string Email { get; set; }
 
-        //[EmailAddress]
-        //[Required]
-        //[RegularExpression(@"[\w-]+@([\w-]+\.)+[\w-]+")]
-        //public string EmailConfirm { get; set; }
+        [EmailAddress]
+        [Required]
+        [RegularExpression(@"[\w-]+@([\w-]+\.)+[\w-]+")]
+        public string EmailConfirm { get; set; }
     }
 }
