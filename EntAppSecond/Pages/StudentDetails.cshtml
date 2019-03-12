@@ -1,0 +1,31 @@
+﻿@page
+@model EntAppCA1.Pages.Students.StudentDetailsModel
+@{
+    ViewData["Title"] = "StudentDetails";
+}
+
+<h2>StudentDetails</h2>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>StudentDetails</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>@Model.Student.PpsNumber</td>
+            <td>@Model.Student.FirstName</td>
+            <td>@Model.Student.LastName</td>
+            <td>@Model.Student.Dob</td>
+            <td>@Model.Student.Gender</td>
+        </tr>
+    </table>
+
+    <form method="post">
+        <input type="hidden" asp-for=Student.PpsNumber>
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

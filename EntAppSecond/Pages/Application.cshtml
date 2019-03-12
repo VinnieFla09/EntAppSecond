@@ -1,0 +1,135 @@
+﻿@page
+@model EntAppCA1.Pages.ApplicationModel
+@{
+    ViewData["Title"] = "Application";
+}
+
+<h2>Application</h2>
+<h2>New student application form</h2>
+<form method="post">
+    <h3>Student Information</h3>
+    <div>
+        <label asp-for=Student.FirstName></label>
+        <input asp-for=Student.FirstName />
+    </div>
+
+    <div>
+        <label asp-for=Student.LastName></label>
+        <input asp-for=Student.LastName />
+    </div>
+
+    <div>
+        <label asp-for=Student.PpsNumber></label>
+        <input asp-for=Student.PpsNumber />
+    </div>
+
+    <div>
+        <label asp-for=Student.Dob></label>
+        <input asp-for=Student.Dob />
+    </div>
+
+    @*<div>
+        <label asp-for=Student.Gender></label>
+        <input asp-for=Student.Gender />
+    </div>*@
+
+    <div>
+
+        <input type="radio" asp-for=Student.Gender value="Male" />Male
+        <input type="radio" asp-for=Student.Gender value="Female" />Female
+        @*<label asp-for=Student.Male></label>
+        <input asp-for=Student.Male />
+
+        <label asp-for=Student.Female></label>
+        <input asp-for=Student.Female />*@
+    </div>
+
+    <h3>Parent/Guardian Information</h3>
+
+
+    <div>
+        <label asp-for=Student.ParentFirstName></label>
+        <input asp-for=Student.ParentFirstName />
+    </div>
+
+    <div>
+        <label asp-for=Student.ParentLastName></label>
+        <input asp-for=Student.ParentLastName />
+    </div>
+
+    <div>
+        <label asp-for=Student.Relationship></label>
+        <input asp-for=Student.Relationship />
+    </div>
+
+    <div>
+        <label asp-for=Student.Address></label>
+        <input asp-for=Student.Address />
+    </div>
+
+    @*<div>
+            <label asp-for=Student.PhoneNumber></label>
+            <input asp-for=Student.PhoneNumber />
+        </div>
+
+        <div>
+            <label asp-for=Student.AltPhoneNumber></label>
+            <input asp-for=Student.AltPhoneNumber />
+        </div>
+
+        <div>
+            <label asp-for=Student.Email></label>
+            <input asp-for=Student.Email />
+        </div>
+
+        <div>
+            <label asp-for=Student.AltEmail></label>
+            <input asp-for=Student.AltEmail />
+        </div>*@
+
+        <h3>Service Information</h3>
+        <div>
+            <input type="radio" asp-for=Student.Hours value="Full-Time" />Full-time
+            <input type="radio" asp-for=Student.Hours value="Part-Time" />Part-time
+        </div>
+
+    @*//Use loop to create checkboxes for days of week.
+        <div>
+            <fieldset>
+                <legend>Pick your favorite days of the week.</legend>
+
+                @for (int i = 0; i < Model.DaysOfWeek.Length; i++)
+                {
+                    <input type="checkbox" asp-for=DaysSelected[i] />
+                    <label asp-for=DaysSelected[i]>@Model.DaysOfWeek[i]</label>
+                    
+                }
+
+            </fieldset>
+        </div>*@
+        @*<div>
+            <label asp-for=Student.Days></label>
+            <input asp-for=Student.Days />
+        </div>
+
+        <div>
+            <label asp-for=Student.StartDate></label>
+            <input asp-for=Student.StartDate />
+        </div>*@
+
+
+
+
+
+
+    <button class="btn-group" type="submit">Submit form</button>
+
+    <div asp-validation-summary="All"></div>
+    @*<span asp-validation-for="Student.StudentID" ></span>
+        <span asp-validation-for=Student.FirstName></span>
+        <span asp-validation-for=Student.LastName></span>
+        <span asp-validation-for=Student.Dob></span>
+        <span asp-validation-for=Student.Email></span>
+        <span asp-validation-for=Student.Height></span>
+        <span asp-validation-for=Student.NumberOfModule></span>*@
+</form>

@@ -1,0 +1,45 @@
+﻿@page
+@model EntAppCA1.Pages.ListStudentsModel
+@{
+    ViewData["Title"] = "ListStudents";
+}
+
+<h2>ListStudents</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>PPS No</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Gender</th>
+            <th>Parent 1st Name</th>
+            <th>Parent 2nd Name</th>
+            <th>Relationship to child</th>
+            <th>Address</th>
+            <th>Hours Requested</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var student in Model.Students)
+        {
+        <tr>
+            <td>@student.PpsNumber</td>
+            <td>@student.FirstName</td>
+            <td>@student.LastName</td>
+            <td>@student.Dob</td>
+            <td>@student.Gender</td>
+            <td>@student.ParentFirstName</td>
+            <td>@student.ParentLastName</td>
+            <td>@student.Relationship</td>
+            <td>@student.Address</td>
+            <td>@student.Hours</td>
+
+            <td> <a asp-page="StudentDetails" asp-route-id="@student.PpsNumber">Details</a> </td>
+        </tr>
+        }
+    </tbody>
+</table>
+

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EntAppSecond.Models
+namespace EntAppCA1.Models
 {
     public class StudentContext : DbContext
     {

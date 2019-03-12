@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using EntAppSecond.Models;
+using EntAppCA1.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace EntAppSecond.Pages
+namespace EntAppCA1.Pages
 {
     public class ListStudentsModel : PageModel
     {
